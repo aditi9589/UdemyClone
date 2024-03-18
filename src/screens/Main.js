@@ -26,7 +26,7 @@ const Main = () => {
         style={{
           position: 'absolute',
           bottom: 0,
-          backgroundColor: 'yellow',
+          backgroundColor: 'white',
           width: '100%',
           height: 60,
 
