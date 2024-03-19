@@ -10,6 +10,7 @@ import Search from '../screens/Search';
 import Learning from '../screens/Learning';
 import Wishlist from '../screens/Wishlist';
 import User from '../screens/User';
+import ViewCourse from '../screens/ViewCourse';
 
 const StackNav = () => {
   const STACK = createStackNavigator();
@@ -49,6 +50,12 @@ const StackNav = () => {
         <STACK.Screen
           name="User"
           component={User}
+          options={{headerShown: false}}
+        />
+
+        <STACK.Screen
+          name="ViewCourse"
+          component={ViewCourse}
           options={{headerShown: false}}
         />
 

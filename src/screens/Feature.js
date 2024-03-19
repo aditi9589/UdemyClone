@@ -7,12 +7,13 @@ import {
   ScrollView,
 } from 'react-native';
 import React from 'react';
+import {useNavigation} from '@react-navigation/native';
 
 // created data
 
 const featuredCourses = [
   {
-    title: 'learn python in 30 days easily',
+    title: 'Learn python in 30 days easily',
     image:
       'https://trisectinstitute.com/wp-content/uploads/2021/12/best-python-training.png',
     tutor: 'Aditi Luthra',
@@ -53,6 +54,7 @@ const featuredCourses = [
 ];
 
 const Feature = () => {
+  const nav1 = useNavigation();
   return (
     <ScrollView style={{flex: 1}}>
       <View style={{flex: 1}}>
@@ -104,7 +106,10 @@ const Feature = () => {
             showsHorizontalScrollIndicator={false}
             renderItem={({item, index}) => {
               return (
-                <TouchableOpacity style={{width: 250, marginLeft: 10}}>
+                <TouchableOpacity
+                  style={{width: 250, marginLeft: 10}}
+                  onPress={() => nav1.navigate('ViewCourse', {data: item})}>
+                  {/* created object  and passing the data and data values to another screen*/}
                   <View
                     style={{
                       width: '100%',
